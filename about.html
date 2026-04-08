@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | YummyFood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="loading">
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <i class="ph-fill ph-bowl-food pulse-animation"></i>
+      <h2>YummyFood</h2>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-bar">
+    <div class="logo">
+      <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; color:inherit;">
+        <i class="ph-fill ph-bowl-food"></i>
+        <h2>YummyFood</h2>
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About Us</a>
+    </div>
+    
+    <div class="nav-actions" style="margin-left: auto;">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <div class="cart-info" id="cart-toggle">
+        <i class="ph ph-shopping-cart"></i>
+        <span>Cart: <span id="cart-count" class="badge">0</span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero -->
+  <header class="hero" style="background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed; height: 50vh;">
+    <div class="hero-overlay">
+      <div class="hero-content fade-in-up">
+        <h1>Our <span class="highlight">Story</span></h1>
+        <p>Passionate about redefining the food delivery experience.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Content -->
+  <section class="section-padding reveal">
+    <div class="about-container">
+      <div class="about-text">
+        <h2 style="font-size:2.5rem; margin-bottom:1.5rem;">Who We Are</h2>
+        <p style="color:var(--text-light); font-size:1.1rem; margin-bottom:1rem;">At YummyFood, we believe that ordering in shouldn't mean sacrificing quality. Founded in 2026, we started with a simple mission: bringing gourmet, restaurant-quality meals straight to your dining table in under 30 minutes.</p>
+        <p style="color:var(--text-light); font-size:1.1rem; margin-bottom:2rem;">Our chefs source only the freshest local ingredients to craft dishes that not only look spectacular but taste absolutely divine. We are not just a delivery service; we are a culinary journey.</p>
+        
+        <div class="features-grid">
+          <div class="feature-box">
+            <i class="ph-fill ph-clock"></i>
+            <h3>Lightning Fast</h3>
+            <p>Hot food guaranteed.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ph-fill ph-plant"></i>
+            <h3>Fresh Ingredients</h3>
+            <p>Locally sourced daily.</p>
+          </div>
+          <div class="feature-box">
+            <i class="ph-fill ph-chef-hat"></i>
+            <h3>Master Chefs</h3>
+            <p>Crafted by experts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80" alt="Our Chef" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <i class="ph-fill ph-bowl-food"></i>
+        <h2>YummyFood</h2>
+      </div>
+      <p class="footer-text">Delivering happiness, one meal at a time.</p>
+      <div class="social-links">
+        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 YummyFood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="sidebar-header">
+      <h2>Your Cart <i class="ph-fill ph-shopping-cart"></i></h2>
+      <button class="icon-btn close-sidebar" id="close-sidebar"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-items-container" id="cart-items-container">
+      <div class="empty-cart-msg">
+        <i class="ph ph-shopping-cart-simple"></i>
+        <p>Your cart is empty.</p>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="total-price">
+        <span>Total:</span>
+        <span id="cart-total" class="highlight">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

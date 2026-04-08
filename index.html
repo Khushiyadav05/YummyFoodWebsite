@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YummyFood | Delicious Food Delivered</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <i class="ph-fill ph-bowl-food pulse-animation"></i>
+      <h2>YummyFood</h2>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-bar">
+    <div class="logo">
+      <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; color:inherit;">
+        <i class="ph-fill ph-bowl-food"></i>
+        <h2>YummyFood</h2>
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+    </div>
+    
+    <div class="nav-search">
+      <i class="ph ph-magnifying-glass"></i>
+      <input type="text" id="search-input" placeholder="Search for food...">
+    </div>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <div class="cart-info" id="cart-toggle">
+        <i class="ph ph-shopping-cart"></i>
+        <span>Cart: <span id="cart-count" class="badge">0</span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content fade-in-up">
+        <h1>Taste the Joy of <span class="highlight">Delicious Food</span></h1>
+        <p>Freshly prepared meals delivered hot and fast to your doorstep.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">
+            Explore Menu <i class="ph ph-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section section-padding">
+    <div class="section-header reveal">
+      <h2>Our Bestsellers</h2>
+      <p>Discover our chef's specials crafted with love.</p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="category-filters reveal delay-1">
+      <button class="filter-btn active" data-filter="all">🔥 All</button>
+      <button class="filter-btn" data-filter="pizza">🍕 Pizza</button>
+      <button class="filter-btn" data-filter="burger">🍔 Burger</button>
+      <button class="filter-btn" data-filter="asian">🥡 Asian</button>
+    </div>
+    
+    <div class="card-container" id="menu-container">
+      <!-- Item 1 -->
+      <div class="card reveal delay-1 menu-item" data-category="pizza" data-name="Classic Pizza" data-desc="Cheesy and delicious Italian pizza with fresh basil and mozzarella." data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIoyAbu10wKzZkXl8fcC-0vXR_GoEbMdvBiQ&s">
+        <div class="card-img-wrapper quick-view-trigger">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIoyAbu10wKzZkXl8fcC-0vXR_GoEbMdvBiQ&s" alt="Pizza">
+          <div class="price-tag">$14.99</div>
+          <div class="quick-view-overlay"><i class="ph ph-eye"></i> Quick View</div>
+        </div>
+        <div class="card-body">
+          <h3>Classic Pizza</h3>
+          <p>Cheesy and delicious Italian pizza with fresh basil.</p>
+          <button class="btn btn-add add-to-cart">
+            <i class="ph ph-plus-circle"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="card reveal delay-2 menu-item" data-category="burger" data-name="Smash Burger" data-desc="Juicy and crispy double beef smash burger with secret sauce." data-img="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg">
+        <div class="card-img-wrapper quick-view-trigger">
+          <img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg" alt="Burger">
+          <div class="price-tag">$9.99</div>
+          <div class="quick-view-overlay"><i class="ph ph-eye"></i> Quick View</div>
+        </div>
+        <div class="card-body">
+          <h3>Smash Burger</h3>
+          <p>Juicy and crispy double beef smash burger.</p>
+          <button class="btn btn-add add-to-cart">
+            <i class="ph ph-plus-circle"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="card reveal delay-3 menu-item" data-category="asian" data-name="Hyderabadi Biryani" data-desc="Spicy, aromatic Indian biryani served with refreshing raita." data-img="https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg">
+        <div class="card-img-wrapper quick-view-trigger">
+          <img src="https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg" alt="Biryani">
+          <div class="price-tag">$12.50</div>
+          <div class="quick-view-overlay"><i class="ph ph-eye"></i> Quick View</div>
+        </div>
+        <div class="card-body">
+          <h3>Hyderabadi Biryani</h3>
+          <p>Spicy, aromatic Indian biryani with raita.</p>
+          <button class="btn btn-add add-to-cart">
+            <i class="ph ph-plus-circle"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="card reveal delay-4 menu-item" data-category="asian" data-name="Stir-fried Noodles" data-desc="Authentic Chinese-style pan-fried soy noodles with veggies." data-img="https://takestwoeggs.com/wp-content/uploads/2023/11/Soy-Sauce-Pan-Fried-Noodles-Takestwoeggs-sq.jpg">
+        <div class="card-img-wrapper quick-view-trigger">
+          <img src="https://takestwoeggs.com/wp-content/uploads/2023/11/Soy-Sauce-Pan-Fried-Noodles-Takestwoeggs-sq.jpg" alt="Noodles">
+          <div class="price-tag">$10.99</div>
+          <div class="quick-view-overlay"><i class="ph ph-eye"></i> Quick View</div>
+        </div>
+        <div class="card-body">
+          <h3>Stir-fried Noodles</h3>
+          <p>Authentic Chinese-style pan-fried soy noodles.</p>
+          <button class="btn btn-add add-to-cart">
+            <i class="ph ph-plus-circle"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="no-results-msg" style="display: none; text-align: center; margin-top: 2rem; color: var(--text-light);">
+      <h3>No food items match your search.</h3>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section section-padding reveal">
+    <div class="section-header">
+      <h2>Happy Foodies</h2>
+      <p>Don't just take our word for it.</p>
+    </div>
+    
+    <div class="carousel-container">
+      <button class="icon-btn prev-btn"><i class="ph ph-caret-left"></i></button>
+      <div class="carousel-track">
+        <div class="testimonial-slide active">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="quote">"Absolutely the best food delivery service I've ever used. The smash burger was phenomenal!"</p>
+          <h4>- Sarah Jenkins</h4>
+        </div>
+        <div class="testimonial-slide">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="quote">"Lightning fast delivery and the pizza was still steaming hot. Highly recommended!"</p>
+          <h4>- Michael Doe</h4>
+        </div>
+        <div class="testimonial-slide">
+          <div class="stars">⭐⭐⭐⭐</div>
+          <p class="quote">"Great variety of Asian dishes. The noodles were authentic and packed with flavor."</p>
+          <h4>- Emily Chen</h4>
+        </div>
+      </div>
+      <button class="icon-btn next-btn"><i class="ph ph-caret-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section section-padding reveal">
+    <div class="section-header">
+      <h2>Get in Touch</h2>
+      <p>Have questions? We'd love to hear from you.</p>
+    </div>
+    
+    <div class="contact-wrapper">
+      <form class="contact-form glass-panel">
+        <div class="input-group">
+          <i class="ph ph-user"></i>
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="input-group">
+          <i class="ph ph-envelope-simple"></i>
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="input-group textarea-group">
+          <i class="ph ph-chat-text"></i>
+          <textarea rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Send Message <i class="ph ph-paper-plane-right"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <i class="ph-fill ph-bowl-food"></i>
+        <h2>YummyFood</h2>
+      </div>
+      <p class="footer-text">Delivering happiness, one meal at a time.</p>
+      <div class="social-links">
+        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 YummyFood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="sidebar-header">
+      <h2>Your Cart <i class="ph-fill ph-shopping-cart"></i></h2>
+      <button class="icon-btn close-sidebar" id="close-sidebar"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-items-container" id="cart-items-container">
+      <div class="empty-cart-msg">
+        <i class="ph ph-shopping-cart-simple"></i>
+        <p>Your cart is empty.</p>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="total-price">
+        <span>Total:</span>
+        <span id="cart-total" class="highlight">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quick-view-modal">
+    <div class="modal-content">
+      <button class="icon-btn close-modal" id="close-modal"><i class="ph ph-x"></i></button>
+      <div class="modal-body">
+        <div class="modal-img-container">
+            <img id="modal-img" src="" alt="Product">
+        </div>
+        <div class="modal-info">
+          <h2 id="modal-title">Product Name</h2>
+          <p id="modal-desc">Product Description goes here...</p>
+          <h3 id="modal-price" class="highlight">$0.00</h3>
+          
+          <div class="nutrition-facts">
+            <span class="badge-nutri"><i class="ph ph-fire"></i> 400 Kcal</span>
+            <span class="badge-nutri"><i class="ph ph-clock"></i> 15-20 Min</span>
+          </div>
+
+          <button id="modal-add-btn" class="btn btn-primary btn-full">
+            <i class="ph ph-plus-circle"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

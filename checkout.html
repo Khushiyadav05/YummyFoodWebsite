@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | YummyFood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="loading">
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <i class="ph-fill ph-bowl-food pulse-animation"></i>
+      <h2>YummyFood</h2>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-bar">
+    <div class="logo">
+      <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; color:inherit;">
+        <i class="ph-fill ph-bowl-food"></i>
+        <h2>YummyFood</h2>
+      </a>
+    </div>
+    
+    <div class="nav-actions" style="margin-left: auto;">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Checkout Content -->
+  <section class="section-padding reveal checkout-page">
+    <div class="section-header" style="margin-bottom:2rem;">
+      <h2>Secure Checkout <i class="ph-fill ph-lock-key"></i></h2>
+      <p>Complete your order securely below.</p>
+    </div>
+
+    <div class="checkout-container">
+      
+      <!-- Form Side -->
+      <div class="checkout-form glass-panel">
+        <h3 style="margin-bottom:1.5rem;">Billing & Shipping Details</h3>
+        <form>
+          <div class="form-row">
+            <div class="input-group">
+              <i class="ph ph-user"></i>
+              <input type="text" placeholder="First Name" required />
+            </div>
+            <div class="input-group">
+              <i class="ph ph-user"></i>
+              <input type="text" placeholder="Last Name" required />
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <i class="ph ph-envelope-simple"></i>
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="input-group">
+            <i class="ph ph-map-pin"></i>
+            <input type="text" placeholder="Full Delivery Address" required />
+          </div>
+
+          <h3 style="margin-bottom:1.5rem; margin-top:2rem;">Payment Method</h3>
+          <div class="input-group">
+            <i class="ph ph-credit-card"></i>
+            <input type="text" placeholder="Card Number" required />
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <i class="ph ph-calendar-blank"></i>
+              <input type="text" placeholder="MM/YY" required />
+            </div>
+            <div class="input-group">
+              <i class="ph ph-lock-key"></i>
+              <input type="text" placeholder="CVV" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full checkout-submit-btn" style="margin-top:1rem;">
+            Place Order <i class="ph ph-check-circle"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Order Summary Side -->
+      <div class="order-summary glass-panel">
+        <h3 style="margin-bottom:1.5rem;">Order Summary</h3>
+        <div id="checkout-cart-items">
+          <!-- Will be filled by JS if we want, or static demo -->
+          <p style="color:var(--text-light); font-style:italic;">Items will be synced from your cart...</p>
+        </div>
+        
+        <div class="summary-totals">
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="checkout-subtotal">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Fee</span>
+            <span>$4.99</span>
+          </div>
+          <div class="summary-line total">
+            <span>Total</span>
+            <span id="checkout-total" class="highlight">$4.99</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2026 YummyFood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
